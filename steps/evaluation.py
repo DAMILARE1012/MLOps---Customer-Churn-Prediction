@@ -7,8 +7,11 @@ from typing import Tuple
 from typing_extensions import Annotated
 from sklearn.base import ClassifierMixin
 from sklearn.metrics import confusion_matrix, classification_report, recall_score
+from zenml.client import Client
 
-@step(enable_cache=False)
+experiment_tracker = Client().active_stack.experiment_tracker
+
+@step(experiment_tracker = experiment_tracker.name, enable_cache=False)
 def evaluate_model(
     model: ClassifierMixin,
     X_test: pd.DataFrame,
