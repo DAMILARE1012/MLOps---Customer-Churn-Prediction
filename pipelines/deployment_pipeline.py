@@ -131,8 +131,13 @@ def prediction_service_loader(
 @step
 def predictor(service: MLFlowDeploymentService, data: str) -> np.ndarray:
     service.start(timeout=10)
-    data = json.loads(data)
-    prediction = service.predict(data)
+    data_dict = json.loads(data)
+    
+    # Convert the split format to DataFrame
+    df = pd.DataFrame(data_dict['data'], columns=data_dict['columns'])
+    
+    # Pass the DataFrame directly to the service
+    prediction = service.predict(df)
     return prediction
 
 @pipeline(enable_cache=False, settings={"docker": docker_settings})
