@@ -4,3 +4,5 @@ matplotlib
 scikit-learn
 zenml
 pyarrow
+mlflow
+streamlit

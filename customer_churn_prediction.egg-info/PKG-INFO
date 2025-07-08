@@ -9,6 +9,8 @@ Requires-Dist: matplotlib
 Requires-Dist: scikit-learn
 Requires-Dist: zenml
 Requires-Dist: pyarrow
+Requires-Dist: mlflow
+Requires-Dist: streamlit
 Dynamic: requires-dist
 Dynamic: requires-python
 Dynamic: summary

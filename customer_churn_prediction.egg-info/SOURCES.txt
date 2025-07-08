@@ -1,3 +1,4 @@
+README.md
 setup.py
 customer_churn_prediction.egg-info/PKG-INFO
 customer_churn_prediction.egg-info/SOURCES.txt
@@ -5,9 +6,17 @@ customer_churn_prediction.egg-info/dependency_links.txt
 customer_churn_prediction.egg-info/requires.txt
 customer_churn_prediction.egg-info/top_level.txt
 pipelines/__init__.py
+pipelines/deployment_pipeline.py
 pipelines/run_pipeline.py
 pipelines/training_pipeline.py
+pipelines/utils.py
 src/__init__.py
 src/clean_data.py
+src/evaluate_model.py
+src/train_model.py
 steps/__init__.py
+steps/config.py
+steps/data_cleaning.py
+steps/evaluation.py
 steps/ingest_data.py
+steps/train_model.py
