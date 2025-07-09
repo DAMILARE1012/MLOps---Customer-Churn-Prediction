@@ -2,7 +2,6 @@ numpy
 pandas
 matplotlib
 scikit-learn
-zenml
-pyarrow
-mlflow
+joblib
 streamlit
+plotly
