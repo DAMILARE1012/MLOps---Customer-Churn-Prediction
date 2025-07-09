@@ -343,11 +343,11 @@ if page == "🔮 Single Prediction":
                         st.plotly_chart(gauge_fig, use_container_width=True)
                     with col2:
                         if churn_probability > 0.7:
-                            st.error("🚨 <b>HIGH RISK</b><br>Immediate intervention needed", unsafe_allow_html=True)
+                            st.markdown("🚨 <b>HIGH RISK</b><br>Immediate intervention needed", unsafe_allow_html=True)
                         elif churn_probability > 0.4:
-                            st.warning("⚠️ <b>MEDIUM RISK</b><br>Proactive engagement", unsafe_allow_html=True)
+                            st.markdown("⚠️ <b>MEDIUM RISK</b><br>Proactive engagement", unsafe_allow_html=True)
                         else:
-                            st.success("✅ <b>LOW RISK</b><br>Regular engagement", unsafe_allow_html=True)
+                            st.markdown("✅ <b>LOW RISK</b><br>Regular engagement", unsafe_allow_html=True)
                     with col3:
                         st.metric("Churn Probability", f"{churn_probability * 100:.1f}%")
                         st.metric("Retention Probability", f"{(1 - churn_probability) * 100:.1f}%")
